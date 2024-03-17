@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { IoTimeOutline } from "react-icons/io5";
 import { AiTwotoneFire } from "react-icons/ai";
 
-const Card = ({ card }) => {
+const Card = ({ card, handleWantToCook }) => {
     //  console.log(card);
      const {id, recipe_name, recipe_image, short_description, ingredients, preparing_time, calories} = card
 
@@ -25,7 +25,7 @@ const Card = ({ card }) => {
                    <AiTwotoneFire></AiTwotoneFire> <span>{calories}</span>calories
                 </h3>
             </div>
-            <button className="btn bg-green-500 border-none lg:px-6 px-3 py-2 rounded-3xl font-bold">Want to Cook</button>
+            <button onClick={() => handleWantToCook(card)} className="btn bg-green-500 border-none lg:px-6 px-3 py-2 rounded-3xl font-bold">Want to Cook</button>
 
         </div>
 
@@ -34,7 +34,8 @@ const Card = ({ card }) => {
 
 
 Card.propTypes = {
-    card: PropTypes.object.isRequired
+    card: PropTypes.object.isRequired,
+    handleWantToCook: PropTypes.func
 }
 
 export default Card;

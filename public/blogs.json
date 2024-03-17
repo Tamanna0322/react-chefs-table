@@ -3,7 +3,7 @@
       "id": "1",
       "recipe_name": "Seafood Spaghetti",
       "recipe_image": "https://i.ibb.co/h9Vh047/spaghetti-seafood-with-tomato-sauce-decorated-with-beautiful-ingredients.jpg",
-      "short_description": "Creamy and flavorful seafood risotto with octopus, perfect for cozy dinners. A vegetarian delight!",
+      "short_description": "Rich and flavorful seafood risotto with octopus, perfect for cozy dinners. A vegetarian delight!",
       "ingredients": [
         "Spaghetti",
         "Vegetable broth",
@@ -83,7 +83,7 @@
     },
     {
       "id": "6",
-      "recipe_name": "Classic Margherita Pizza",
+      "recipe_name": "Classic Pizza",
       "recipe_image": "https://i.ibb.co/bm9xkSC/saahil-khatkhate-kf-Ds-MDy-X1-K0-unsplash.jpg",
       "short_description": "A timeless favorite, this Margherita pizza boasts a thin crust, fresh tomatoes, basil, and gooey mozzarella cheese.",
       "ingredients": [
