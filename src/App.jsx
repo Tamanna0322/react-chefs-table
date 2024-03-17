@@ -16,10 +16,24 @@ function App() {
       .then(data => setCards(data))
   }, [])
 
-  const handleWantToCook = cook =>{
-    const wantToCook = [...cooking, cook];
-    setCooking(wantToCook);
+  const handleWantToCook = cook => {
+    const isExist = cooking.find(card => card.id == cook.id);
+    if(!isExist){
+      const wantToCook = [...cooking, cook];
+      setCooking(wantToCook);
+    }
+    else{
+      alert('already exist');
+    }
+    
   }
+
+  
+  const handlePreparing = (id) =>{
+    const newCooking = cooking.filter(item => item.id !== id);
+    setCooking(newCooking);
+  }
+
 
   return (
     <>
@@ -30,10 +44,10 @@ function App() {
         <p className='lg:text-xl w-2/3 text-center'>Find yummy recipes here. From simple dishes to tasty treats, get cooking ideas that make your kitchen fun and delicious.</p>
       </div>
 
-      <div className='max-w-7xl mx-auto flex lg:mt-14 mt-9'>
+      <div className='max-w-7xl mx-auto lg:flex lg:mt-14 mt-9'>
         <div className='lg:w-[59%] m-6 grid lg:grid-cols-2 grid-cols-1 gap-5'>
           {
-            cards.map(card => <Card key={card.id} card={card} handleWantToCook = {handleWantToCook}></Card>)
+            cards.map(card => <Card key={card.id} card={card} handleWantToCook={handleWantToCook}></Card>)
           }
         </div>
 
@@ -41,16 +55,26 @@ function App() {
           <h3 className='text-3xl font-bold text-center mb-3'>Want To Cook: {cooking.length} </h3>
           <hr />
           <div className='w-[80%] flex justify-around my-4 font-semibold'>
-           <h3>Name</h3>
+            <h3>Name</h3>
             <h3>Time</h3>
             <h3>Calories</h3>
           </div>
           {
-                cooking.map((cook, idx) => <Cooking key={idx} idx={idx} cooking={cook}>
-                </Cooking>)
-          }        
+            cooking.map((cook, idx) => <Cooking key={idx} idx={idx} handlePreparing={handlePreparing} cooking={cook}>
+            </Cooking>)
+          }
+
+          <h3 className='text-3xl font-bold text-center mb-3'>Currently Cooking: </h3>
+          <hr />
+          <div className=' flex justify-around my-4 font-semibold'>
+            <h3>Name</h3>
+            <h3>Time</h3>
+            <h3>Calories</h3>
+          </div>
 
         </div>
+
+
       </div>
 
     </>
