@@ -5,6 +5,8 @@ import Header from './components/Header/Header'
 import Card from './components/Header/Card/Card';
 import Cooking from './components/Cooking/Cooking';
 import Preparing from './components/Preparing/Preparing';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -25,7 +27,7 @@ function App() {
       setCooking(wantToCook);
     }
     else{
-      alert('already exist');
+      tostify();
     }
     
   }
@@ -41,6 +43,10 @@ function App() {
     setPreparing(preparingBtn);
   }
 
+  const tostify =() => toast('Already exist');
+
+
+
 
   return (
     <>
@@ -54,7 +60,7 @@ function App() {
       <div className='max-w-7xl mx-auto lg:flex lg:mt-14 mt-9'>
         <div className='lg:w-[59%] m-6 grid lg:grid-cols-2 grid-cols-1 gap-5'>
           {
-            cards.map(card => <Card key={card.id} card={card} handleWantToCook={handleWantToCook}></Card>)
+            cards.map(card => <Card key={card.id} card={card} tostify={tostify} handleWantToCook={handleWantToCook}></Card>)
           }
         </div>
 

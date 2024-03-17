@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import { IoTimeOutline } from "react-icons/io5";
 import { AiTwotoneFire } from "react-icons/ai";
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const Card = ({ card, handleWantToCook }) => {
+const Card = ({ card, handleWantToCook, tostify }) => {
     //  console.log(card);
      const {recipe_name, recipe_image, short_description, ingredients, preparing_time, calories} = card
 
@@ -25,7 +27,11 @@ const Card = ({ card, handleWantToCook }) => {
                    <AiTwotoneFire></AiTwotoneFire> <span>{calories}</span>calories
                 </h3>
             </div>
-            <button onClick={() => handleWantToCook(card)} className="btn bg-green-500 border-none lg:px-6 px-3 py-2 rounded-3xl font-bold">Want to Cook</button>
+            <button onClick={() => {
+                {tostify}
+                handleWantToCook(card);
+            }} className="btn bg-green-500 border-none lg:px-6 px-3 py-2 rounded-3xl font-bold">Want to Cook</button>
+            <ToastContainer></ToastContainer>
 
         </div>
 
@@ -35,7 +41,8 @@ const Card = ({ card, handleWantToCook }) => {
 
 Card.propTypes = {
     card: PropTypes.object.isRequired,
-    handleWantToCook: PropTypes.func
+    handleWantToCook: PropTypes.func,
+    tostify: PropTypes.func
 }
 
 export default Card;
