@@ -4,11 +4,13 @@ import './App.css'
 import Header from './components/Header/Header'
 import Card from './components/Header/Card/Card';
 import Cooking from './components/Cooking/Cooking';
+import Preparing from './components/Preparing/Preparing';
 
 
 function App() {
   const [cards, setCards] = useState([]);
   const [cooking, setCooking] = useState([]);
+  const [preparing, setPreparing] =useState([]);
 
   useEffect(() => {
     fetch('blogs.json')
@@ -32,6 +34,11 @@ function App() {
   const handlePreparing = (id) =>{
     const newCooking = cooking.filter(item => item.id !== id);
     setCooking(newCooking);
+  }
+
+  const preparingButton = item =>{
+    const preparingBtn = [...preparing, item];
+    setPreparing(preparingBtn);
   }
 
 
@@ -60,17 +67,20 @@ function App() {
             <h3>Calories</h3>
           </div>
           {
-            cooking.map((cook, idx) => <Cooking key={idx} idx={idx} handlePreparing={handlePreparing} cooking={cook}>
+            cooking.map((cook, idx) => <Cooking key={idx} idx={idx} handlePreparing={handlePreparing} preparingButton={preparingButton} cooking={cook}>
             </Cooking>)
           }
 
-          <h3 className='text-3xl font-bold text-center mb-3'>Currently Cooking: </h3>
+          <h3 className='text-3xl font-bold text-center mb-3 mt-7'>Currently Cooking: {preparing.length}</h3>
           <hr />
           <div className=' flex justify-around my-4 font-semibold'>
             <h3>Name</h3>
             <h3>Time</h3>
             <h3>Calories</h3>
           </div>
+          {
+          preparing.map((cook, idx) => <Preparing key={idx} idx={idx} preparing={cook}></Preparing>)
+          }
 
         </div>
 

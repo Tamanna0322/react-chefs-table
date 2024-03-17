@@ -4,7 +4,7 @@ import { AiTwotoneFire } from "react-icons/ai";
 
 const Card = ({ card, handleWantToCook }) => {
     //  console.log(card);
-     const {id, recipe_name, recipe_image, short_description, ingredients, preparing_time, calories} = card
+     const {recipe_name, recipe_image, short_description, ingredients, preparing_time, calories} = card
 
     return (
         <div className='border-2 p-5 rounded-xl space-y-4'>

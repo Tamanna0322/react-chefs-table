@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 
-const Cooking = ({cooking, idx, handlePreparing}) => {
+const Cooking = ({cooking, idx, handlePreparing, preparingButton }) => {
     // console.log(cooking, idx);
     return (
         <div className="flex justify-between items-center text-black my-4 bg-slate-100 rounded-2xl py-4 px-2">
@@ -9,7 +9,10 @@ const Cooking = ({cooking, idx, handlePreparing}) => {
             <h3>{cooking.recipe_name}</h3>
             <h3>{cooking.preparing_time}minutes</h3>
             <h3>{cooking.calories}calories</h3>
-            <button onClick={() => handlePreparing(cooking.id)} className=" bg-green-400 border-none px-3 py-1 rounded-3xl font-semibold">Preparing</button>
+            <button onClick={() => {
+                handlePreparing(cooking.id);
+                preparingButton(cooking);
+            }} className=" bg-green-400 border-none px-3 py-1 rounded-3xl font-semibold">Preparing</button>
 
         </div>
     );
@@ -18,7 +21,9 @@ const Cooking = ({cooking, idx, handlePreparing}) => {
 Cooking.propTypes ={
     cooking: PropTypes.object,
     idx: PropTypes.number,
-    handlePreparing: PropTypes.func
+    handlePreparing: PropTypes.func,
+    preparingButton: PropTypes.func
+    
 }
 
 export default Cooking;
