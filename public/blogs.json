@@ -1,9 +1,9 @@
 [
     {
-      "recipe_id": "1",
+      "id": "1",
       "recipe_name": "Seafood Spaghetti",
       "recipe_image": "https://i.ibb.co/h9Vh047/spaghetti-seafood-with-tomato-sauce-decorated-with-beautiful-ingredients.jpg",
-      "short_description": "Creamy and flavorful seafood risotto, perfect for cozy dinners. A vegetarian delight!",
+      "short_description": "Creamy and flavorful seafood risotto with octopus, perfect for cozy dinners. A vegetarian delight!",
       "ingredients": [
         "Spaghetti",
         "Vegetable broth",
@@ -12,11 +12,11 @@
         "Garlic",
         "Butter"
       ],
-      "preparing_time": "45 minutes",
-      "calories": "380 cal"
+      "preparing_time": 45 ,
+      "calories": 380 
     },
     {
-      "recipe_id": "2",
+      "id": "2",
       "recipe_name": "Beef Steak",
       "recipe_image": "https://i.ibb.co/wcrx5HH/loija-nguyen-NYBn-DWe-OX2c-unsplash.jpg",
       "short_description": "A light and refreshing steak bursting with seasonal flavors. Drizzled with tangy balsamic dressing for the perfect finish!",
@@ -28,11 +28,11 @@
         "Origano",
         "Olive oil"
       ],
-      "preparing_time": "30 minutes",
-      "calories": "280 cal"
+      "preparing_time": 30 ,
+      "calories": 280 
     },
     {
-      "recipe_id": "3",
+      "id": "3",
       "recipe_name": "Chicken Burger",
       "recipe_image": "https://i.ibb.co/kgMhM5r/amirali-mirhashemian-sc5s-TPMr-Vfk-unsplash.jpg",
       "short_description": "Deliciously cooked chicken topped with marinara sauce and melted mozzarella cheese. A family favorite!",
@@ -45,11 +45,11 @@
         "Parsley",
         "Red pepper flakes"
       ],
-      "preparing_time": "35 minutes",
-      "calories": "320 cal"
+      "preparing_time": 35 ,
+      "calories": 320 
     },
     {
-      "recipe_id": "4",
+      "id": "4",
       "recipe_name": "Buffalo Wings",
       "recipe_image": "https://i.ibb.co/4s0Cpzs/alaundra-alford-Bm-Rb-JBoud-Dw-unsplash.jpg",
       "short_description": "Chicken wings marinated in a tangy buffalo sauce, deep-fried to perfection until crispy, and served with a side of creamy ranch.",
@@ -61,11 +61,11 @@
         "Chilli sauce",
         "Cumin"
       ],
-      "preparing_time": "50 minutes",
-      "calories": "250 cal"
+      "preparing_time": 50 ,
+      "calories": 250 
     },
     {   
-      "recipe_id": "5",
+      "id": "5",
       "recipe_name": "Shrimp Salad",
       "recipe_image": "https://i.ibb.co/z6NpgFP/ryan-concepcion-w-z0-RJCSBi-E-unsplash.jpg",
       "short_description": "Bright and tangy shrimp salad infused with zesty lemon and garlic flavors. A refreshing twist on a classic dish!",
@@ -78,11 +78,11 @@
         "Shrimp",
         "Olive oil"
       ],
-      "preparing_time": "40 minutes",
-      "calories": "410 cal"
+      "preparing_time": 40 ,
+      "calories": 410 
     },
     {
-      "recipe_id": "6",
+      "id": "6",
       "recipe_name": "Classic Margherita Pizza",
       "recipe_image": "https://i.ibb.co/bm9xkSC/saahil-khatkhate-kf-Ds-MDy-X1-K0-unsplash.jpg",
       "short_description": "A timeless favorite, this Margherita pizza boasts a thin crust, fresh tomatoes, basil, and gooey mozzarella cheese.",
@@ -92,10 +92,11 @@
         "Fresh tomatoes",
         "Fresh basil",
         "Mozzarella cheese",
+        "Origano",
         "Olive oil"
       ],
-      "preparing_time": "20 minutes",
-      "calories": "180 cal"
+      "preparing_time": 20 ,
+      "calories": 180 
     }
   ]
   
